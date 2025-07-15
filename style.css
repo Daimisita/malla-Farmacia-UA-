@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #6a9cde;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cell {
+  padding: 15px;
+  background-color: #fff9d6;
+  border: 2px solid #6a9cde;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.cell:hover {
+  transform: scale(1.02);
+}
+
+.cell.active {
+  background-color: #6a9cde;
+  color: white;
+}
+
+.cell.disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
